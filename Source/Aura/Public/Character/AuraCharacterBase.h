@@ -16,4 +16,7 @@ public:
 	AAuraCharacterBase();
 	virtual void BeginPlay() override;
 protected:
+	
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	TObjectPtr<USkeletalMeshComponent> Weapon;
 };

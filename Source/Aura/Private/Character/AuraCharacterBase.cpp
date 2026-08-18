@@ -12,7 +12,6 @@ AAuraCharacterBase::AAuraCharacterBase()
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
-
 void AAuraCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();

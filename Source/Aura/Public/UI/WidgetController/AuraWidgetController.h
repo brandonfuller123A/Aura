@@ -8,6 +8,7 @@
 
 class UAttributeSet;
 class UAbilitySystemComponent;
+
 /**
  * 
  */
@@ -15,8 +16,7 @@ UCLASS()
 class AURA_API UAuraWidgetController : public UObject
 {
 	GENERATED_BODY()
-protected:
-	
+public:
 	UPROPERTY(BlueprintReadOnly, Category = "WidgetController")
 	TObjectPtr<APlayerController> PlayerController;
 	
@@ -28,4 +28,5 @@ protected:
 	
 	UPROPERTY(BlueprintReadOnly, Category = "WidgetController")
 	TObjectPtr<UAttributeSet> AttributeSet;
+	
 };

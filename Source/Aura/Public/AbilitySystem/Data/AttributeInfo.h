@@ -23,7 +23,6 @@ struct FAuraAttributeInfo
 	
 	UPROPERTY(BlueprintReadOnly)
 	float AttributeValue = 0.f;
-	
 };
 
 /**
@@ -36,8 +35,6 @@ class AURA_API UAttributeInfo : public UDataAsset
 public:
 	FAuraAttributeInfo FindAttributeInfoForTag(const FGameplayTag& AttributeTag, bool bLogIsNotFound = false) const;
 	
-	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	TArray<FAuraAttributeInfo> AttributeInformation;
-	
 };

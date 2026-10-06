@@ -61,14 +61,13 @@ void AAuraEnemy::BeginPlay()
 				OnHealthChanged.Broadcast(Data.NewValue);
 			}
 		);
-		
-		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AuraAS->GetHealthAttribute()).AddLambda(
+		AbilitySystemComponent->GetGameplayAttributeValueChangeDelegate(AuraAS->GetMaxHealthAttribute()).AddLambda(
 			[this](const FOnAttributeChangeData& Data)
 			{
-				OnMaxHealthChanged.Broadcast(Data.NewValue);	
+				OnMaxHealthChanged.Broadcast(Data.NewValue);
 			}
 		);
-		
+
 		OnHealthChanged.Broadcast(AuraAS->GetHealth());
 		OnMaxHealthChanged.Broadcast(AuraAS->GetMaxHealth());
 	}

@@ -33,6 +33,11 @@ void AAuraCharacterBase::BeginPlay()
 	
 }
 
+UAnimMontage* AAuraCharacterBase::GetHitReactMontage_Implementation()
+{
+	return HitReactMontage;
+}
+
 FVector AAuraCharacterBase::GetCombatSocketLocation()
 {
 	check(Weapon);

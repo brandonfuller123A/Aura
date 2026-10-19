@@ -104,8 +104,18 @@ void AAuraPlayerController::AbilityInputTagReleased(FGameplayTag InputTag)
 				{
 					Spline->AddSplinePoint(PointLoc, ESplineCoordinateSpace::World);
 				}
-				CachedDestination = NavPath->PathPoints[NavPath->PathPoints.Num() - 1];
-				bAutoRunning = true;
+				
+				if (NavPath->PathPoints.Num() > 0)
+				{
+					CachedDestination = NavPath->PathPoints[NavPath->PathPoints.Num() - 1];
+					//bAutoRunning = true;
+				}
+				
+				// Just to note if the enemies come to the main player revert back to the two statements
+				// below 176 Using  EQS Queries in Behavior Trees
+				// Time stamp:6:01
+				//CachedDestination = NavPath->PathPoints[NavPath->PathPoints.Num() - 1];
+				//bAutoRunning = true;
 			}
 		}
 		FollowTime = 0.f;
